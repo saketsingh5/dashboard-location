@@ -1,0 +1,51 @@
+<div class="list-data-component">
+  <div class="search-block">
+    <div class="search-text">Search</div>
+    <input
+      class="input-type"
+      type="text"
+      [(ngModel)]="searchText"
+      (keyup)="searchItem()"
+      name="search"
+      placeholder="Search Here"
+    />
+  </div>
+
+  <div class="content-container">
+
+    <div class="check-category">
+        <div class="category-text">Categories</div>
+        <div class="list-filters">
+            <div class="filter-item">
+                <div class="filter-text">e-voucher</div>
+                <div class="filter-check">
+                    <img src="" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-component">
+        <div class="list-component__total">
+          <div class="total-result">{{ listOfData?.length }} results Found</div>
+          <div class="sort-block" (click)="sort()">Sort</div>
+        </div>
+        <div class="list-container">
+          <div class="list-container__card" *ngFor="let list of listOfData">
+            <img [src]="list?.display_img_url" alt="{{ list?.id }}" />
+            <h3>{{ list?.name }}</h3>
+            <p>{{ list?.points }}</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+</div>
+
+<div class="sort-by" *ngIf="showSortBy">
+  <app-sortby
+    (sendSortVal)="sortVal($event)"
+    (close)="closeSortBy()"
+  ></app-sortby>
+</div>

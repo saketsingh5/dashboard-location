@@ -1,0 +1,42 @@
+@import "mixins";
+
+.header-component {
+  height: 100%;
+  width: 100%;
+  @include flex-container(center, center);
+  background-color: rgb(223, 57, 57);
+
+  .header__contents{
+    height: 100%;
+    width: 80%;
+    @include flex-container(center, space-between);
+
+    .logo{
+        @include flex-container(center, center);
+        background-color: rgb(232, 232, 232);;
+        border-radius: 0.2rem;
+        height: 3rem;
+       cursor: pointer;
+       padding: 0.2rem;
+    }
+
+    .header__contents-logo{
+      
+    }
+    .header__contents-desc{
+        @include flex-container(center, center);
+       
+       .header__contents-notify{
+        margin: 0 0.5rem;
+       } 
+       .header__contents-lang{
+        margin: 0 0.5rem;
+       } 
+       .header__contents-profile{
+         margin: 0 0.5rem;
+       } 
+    }
+  }
+
+  
+}

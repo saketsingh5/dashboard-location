@@ -1,0 +1,99 @@
+@import "mixins";
+
+.sort-viewer {
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #000000b2;
+  backdrop-filter: blur (12px);
+
+  .bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+  }
+
+  .sort-container {
+    height: 100%;
+    width: 45%;
+    background-color: white;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    overflow: hidden;
+    animation: popup 0.3s ease-in;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+    @include flex-container(center, space-between, column);
+
+    .sort-content{
+        width: 100%;
+        margin-top: 1rem;
+        @include flex-container(center, center, column);
+    }
+
+    .filter-block{
+        width: 90%;
+        @include flex-container(center, space-between);
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgb(213, 213, 213);
+
+        .filter-text{
+            @include font(13, 3.5vw, 15, bold, #000000);
+        }
+        .filter-reset{
+            @include font(13, 3.5vw, 15, bold, #ff7925);
+            cursor: pointer;
+        }
+    }
+    .sort-block{
+        width: 90%;
+
+        .sort-text{
+            @include font(13, 3.5vw, 15, bold, #000000);
+            margin: 1rem 0; 
+        }
+
+        .sort-select-block{
+            @include flex-container(unset, start);
+
+            .sort-select{
+                padding: 1rem 1.5rem;
+                border: 1px solid #e7e7e7;
+                border-radius: 0.5rem;
+                margin-right: 1rem;
+                cursor: pointer;
+
+                &.selected{
+                    background: rgb(223, 57, 57);
+                    color: #fff ;
+                }
+            }
+        }
+    }
+  }
+
+  .apply{
+      width: 90%;
+      height: 3rem;
+      @include flex-container(center, center);
+      background: rgb(223, 57, 57);
+      @include font(16, 3.5vw, 18, bold, #fff);
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+
+      &.disable{
+          opacity: 0.5;
+          pointer-events: none;
+      }
+  }
+}

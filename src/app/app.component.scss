@@ -1,0 +1,11 @@
+@import "./../assets/styles/helpers/mixins";
+
+.app-component {
+    height: 100%;
+    width: 100%;
+    
+    .route-content {
+      height: 100%;
+      width: 100%;
+    }
+  }

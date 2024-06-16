@@ -1,0 +1,22 @@
+<div class="sort-viewer">
+    <div class="bg" (click)="closePopup()"></div>
+      <div class="sort-container">
+           <div class="sort-content">
+            <div class="filter-block">
+                <div class="filter-text">Filter By</div>
+                <div class="filter-reset" (click)="resetAll()">Reset All</div>
+            </div> 
+            <div class="sort-block">
+             <div class="sort-text">Sort</div>
+                <div class="sort-select-block">
+                    <div class="sort-select" [class.selected]="sortvalue=='asc'" (click)="sortItem('asc')">A to Z</div>
+                    <div class="sort-select" [class.selected]="sortvalue=='dsc'" (click)="sortItem('dsc')">Z to A</div>
+                </div>
+            </div>   
+           </div> 
+
+           <div class="apply" [class.disable]="sortvalue===null" (click)="apply()">Apply</div>
+      </div>
+
+  </div>
+  
