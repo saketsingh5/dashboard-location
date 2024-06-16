@@ -7,14 +7,34 @@ import { DATA } from '@assets/constant/app.constant';
   styleUrls: ['./listdata.component.scss']
 })
 export class ListdataComponent implements OnInit {
-
+  showLable: boolean
   listOfData = DATA;
   showSortBy:boolean = false
   searchText:string = ''
+
   ngOnInit(): void {
     
     console.log(this.searchText);
     
+  }
+
+  getStatus(item) {
+    if (item.quantity === 0) {
+      return {
+       showLable: true, 
+       desc: 'Out of Stock'
+      };
+    } else if (item.quantity <= item.low_quantity) {
+      return {
+        showLable: true, 
+        desc: `ON High Demand (Only ${item.low_quantity} rewards left)`
+       };
+    } else {
+      return {
+        showLable: false, 
+        desc: null,
+       };
+    }
   }
 
   sortVal(val){

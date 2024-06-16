@@ -32,9 +32,15 @@
         </div>
         <div class="list-container">
           <div class="list-container__card" *ngFor="let list of listOfData">
-            <img [src]="list?.display_img_url" alt="{{ list?.id }}" />
-            <h3>{{ list?.name }}</h3>
-            <p>{{ list?.points }}</p>
+            <div class="card-header">
+                <img [src]="list?.display_img_url" alt="{{ list?.id }}" />
+                <span *ngIf="getStatus(list)['showLable']" class="label">{{ getStatus(list)['desc'] }}</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-name">{{ list?.name }}</h3>
+                <p class="card-points">{{ list?.points }}</p>
+                <p class="card-date">{{ list?.valid_until | date:'longDate' }}</p>
+              </div>
           </div>
         </div>
       </div>
