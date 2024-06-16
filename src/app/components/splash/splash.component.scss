@@ -3,32 +3,18 @@
 .splash-component {
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, #FF7300 0%, #FF4200 100%);
+  background: #fff;
 
-  .tnc-text{
-    @include font(100, 2.5vw, 100, bold, #fff);
-    letter-spacing: -0.05px;
-    position: absolute;
-    top: 3rem;
-  }
 
   .top-container{
     @include flex-container(center,center,row);
     height: 85%;
     width: 100%;
-   
     @include flex-container(center, center, column);
+    position: relative;
     
 
-    background-position: center center;
-    position: relative;
-  
-    // @media screen and (min-height: 700px) {
-    //   background-image: url(~src/assets/images/common/bg-ld.webp);
-    //   background-repeat: no-repeat;
-    //   background-size: 100% 100%;
-    //   background-position: center center;
-    // }
+
     .logo{
       width: 65vw;
       @include flex-container(center, center,row)
@@ -36,16 +22,11 @@
    
   }
 
-   .back{
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-   }
   .bottom-container {
     height: 15%;
     width: 100%;
     @include flex-container(center,space-evenly,column);
-    background-color: #fff;
+    background-color:rgb(223, 57, 57);
     border-radius: 1rem 1rem 0rem 0rem;
 
     .loading-container {
@@ -82,7 +63,7 @@
               left: 0px;
               right: 1px;
               bottom: 0px;
-              background: rgba(57, 35, 111, 1);
+              background: #fff;
               border-radius: 8px;
               transition: width 0.06s ease-in;
             }
@@ -90,27 +71,6 @@
         }
       }
     }
-
-    .bottom {
-      background-color: #fff;
-      @include flex-container(center, center);
-      height: 3,5rem;
-      padding: 0.5rem 0;
-
-      .powered-by {
-        @include font(10, 3.2vw, 14, tmedium, rgba(0, 0, 0, 0.65));
-        margin-right: 0.5rem;
-      }
-
-      img {
-        height: 2.5rem;
-      }
-    }
-  }
-
-  .logo {
-    width: 85%;
-    margin-bottom: 2rem;
   }
 }
 

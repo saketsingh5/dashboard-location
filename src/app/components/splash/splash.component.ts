@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-splash',
@@ -9,6 +10,11 @@ export class SplashComponent implements OnInit {
   loadingTime: any;
   loadingPercentage = 0;
   time = 10;
+
+  constructor(
+    private router: Router
+  ){}
+
   ngOnInit(): void {
     this.calculateLoadingPercentage();
   }
@@ -21,5 +27,7 @@ export class SplashComponent implements OnInit {
     }, 100);
   }
 
-  navigate(){}
+  navigate(){
+    this.router.navigate(['/main'])
+  }
 }
