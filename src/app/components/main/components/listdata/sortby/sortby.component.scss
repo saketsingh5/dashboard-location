@@ -63,7 +63,7 @@
         }
 
         .sort-select-block{
-            @include flex-container(unset, start);
+            @include flex-container(unset, flex-start);
 
             .sort-select{
                 padding: 1rem 1.5rem;

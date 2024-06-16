@@ -5,7 +5,7 @@
     @include flex-container(center, center, column);
 
     .search-block{
-        @include flex-container(start, start, column);
+        @include flex-container(flex-start, flex-start, column);
         width: 80%;
         margin: 2rem 0;
         .search-text{
@@ -24,7 +24,7 @@
 
     .content-container{
         width: 80%;
-        @include flex-container(start, center);
+        @include flex-container(flex-start, center);
         .list-component{
             width: 100%;
             @include flex-container(center, center, column);
