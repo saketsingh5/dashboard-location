@@ -25,6 +25,13 @@
     .content-container{
         width: 80%;
         @include flex-container(flex-start, center);
+
+        .check-category{
+
+          .category-text{}
+          .list-filters{}
+        }
+
         .list-component{
             width: 100%;
             @include flex-container(center, center, column);
