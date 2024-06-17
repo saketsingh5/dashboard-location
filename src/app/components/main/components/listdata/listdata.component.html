@@ -32,7 +32,7 @@
         <div class="list-container">
           <div class="list-container__card" *ngFor="let list of listOfData">
             <div class="card-header">
-                <img [src]="list?.display_img_url" alt="{{ list?.id }}" />
+                <img [src]="list?.display_img_url || 'https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png'" alt="{{ list?.id }}" />
                 <span *ngIf="getStatus(list)['showLable']" class="label">{{ getStatus(list)['desc'] }}</span>
               </div>
               <div class="card-body">
