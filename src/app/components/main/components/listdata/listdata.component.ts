@@ -67,7 +67,7 @@ export class ListdataComponent implements OnInit {
   searchItem(){
     setTimeout(() => {
       this.search();
-    }, 2000);
+    }, 1000);
   }
 
   closeSortBy(){
