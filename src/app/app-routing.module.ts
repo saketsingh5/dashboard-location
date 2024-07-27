@@ -1,29 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SplashComponent } from './components/splash/splash.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddContactComponent } from './components/add-contact/add-contact.component';
 
 const routes: Routes = [
-  {
-    path: "",
-    redirectTo: "/splash",
-    pathMatch: "full",
-  },
-  {
-    path: "index.html",
-    redirectTo: "/splash",
-    pathMatch: "full",
-  },
-  {
-    path: "splash",
-    component: SplashComponent,
-  },
-
-  {
-    path: "main",
-    loadChildren: () =>
-      import("./components/main/main.module").then((m) => m.MainModule),
-
-  }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'add-contact', component: AddContactComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

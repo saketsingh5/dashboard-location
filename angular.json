@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rewardz": {
+    "dashboard": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rewardz",
+            "outputPath": "dist/dashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -36,12 +36,16 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/assets/styles/main.scss"
+              "src/assets/styles/main.scss",
+                "node_modules/leaflet/dist/leaflet.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -74,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rewardz:build:production"
+              "browserTarget": "dashboard:build:production"
             },
             "development": {
-              "browserTarget": "rewardz:build:development"
+              "browserTarget": "dashboard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rewardz:build"
+            "browserTarget": "dashboard:build"
           }
         },
         "test": {
@@ -99,10 +103,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+                "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           }

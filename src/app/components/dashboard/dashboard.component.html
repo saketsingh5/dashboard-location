@@ -1,0 +1,32 @@
+<div class="container">
+    <button (click)="toggleView()" class="toggle-button">Toggle View</button>
+  
+    <div *ngIf="isTableView">
+      <!-- Table View Code -->
+      <table class="contact-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contacts">
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.phoneNumber }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ getRandomAddress(contact.addresses) }}</td>
+            <td>{{ contact.longitude }}</td>
+            <td>{{ contact.latitude }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="!isTableView" id="map" class="map-container"></div>
+  </div>
+  

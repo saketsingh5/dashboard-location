@@ -1,5 +1,7 @@
-<div class="app-component">
-  <div class="route-content">
-    <router-outlet></router-outlet>
-  </div>
+<div class="sidebar">
+  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+  <a routerLink="/add-contact" routerLinkActive="active">Add Contact</a>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
