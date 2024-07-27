@@ -1,32 +1,31 @@
 .container {
-    padding: 16px;
-  }
-  
-  .toggle-button {
-    margin-bottom: 16px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+    margin: 0 auto;
+    padding: 20px;
   }
   
   .contact-table {
     width: 100%;
     border-collapse: collapse;
-  }
+    margin-bottom: 20px;
   
-  .contact-table th, .contact-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
+    th, td {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 8px;
+    }
   
-  .contact-table th {
-    background-color: #f2f2f2;
+    th {
+      background-color: #f2f2f2;
+    }
+  
+    .fixed-width {
+      width: 150px; /* Set a fixed width as needed */
+    }
   }
   
   .map-container {
-    height: 500px; /* Define a height for the map */
-    width: 100%; /* Full width */
+    height: 600px; /* Adjust height as needed */
+    margin-top: 20px;
+    // pointer-events: none;
   }
   

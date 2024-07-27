@@ -1,4 +1,3 @@
-
 export interface Contact {
     name: string;
     phoneNumber: string;
@@ -6,5 +5,6 @@ export interface Contact {
     addresses: string[];
     longitude: number;
     latitude: number;
+    randomAddress?: string;
   }
   

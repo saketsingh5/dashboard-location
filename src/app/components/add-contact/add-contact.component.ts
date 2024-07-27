@@ -78,7 +78,7 @@ export class AddContactComponent implements OnInit {
   onSubmit(): void {
     if (this.contactForm.valid) {
       console.log('Form data:', this.contactForm.value);
-      
+  
       const newContact: Contact = this.contactForm.value;
       this.contactService.addContact(newContact);
       this.router.navigate(['/dashboard']); // Navigate to dashboard after submission
