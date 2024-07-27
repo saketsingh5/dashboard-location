@@ -1,4 +1,8 @@
 
+.app-component{
+  display: flex;
+}
+
 .sidebar {
   background-color: #2e3b84;
   width: 200px;
@@ -20,8 +24,5 @@
 }
 
 .content {
-  position: absolute;
-  top: 0;
-  left: 15rem;
-  padding: 20px;
+  margin-left: 1.5rem;
 }
